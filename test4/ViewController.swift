@@ -34,6 +34,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
         
         // セルに表示する値を設定する
+        
         cell.textLabel!.text = fruits[indexPath.row]
         
         return cell
