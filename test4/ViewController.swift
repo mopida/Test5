@@ -46,4 +46,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("セル番号：\(indexPath.row) セルの内容：\(fruits[indexPath.row])")
     }
+    
 }
