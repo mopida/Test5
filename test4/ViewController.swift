@@ -45,6 +45,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     /// セルが選択された時に呼ばれるデリゲートメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("セル番号：\(indexPath.row) セルの内容：\(fruits[indexPath.row])")
+        
+        
+        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "target" ) 
+        self.present( targetViewController, animated: true, completion: nil)
+        
+        
     }
     
 }
