@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     let fruits = ["月曜1限","月曜2限","月曜3限","月曜4限","月曜5限","月曜6限",
         "火曜1限","火曜2限","火曜3限","火曜4限","火曜5限","火曜6限",
