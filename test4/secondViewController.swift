@@ -8,7 +8,7 @@
 
 import UIKit
 
-class secondViewController: UIViewController,UITextFieldDelegate{
+class secondViewController: UIViewController,UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet var AttendLabel : UILabel!
     @IBOutlet var AbsentLabel: UILabel!
@@ -18,9 +18,14 @@ class secondViewController: UIViewController,UITextFieldDelegate{
     
     let userDefaults = UserDefaults.standard
     
-    var absentrArray: [String] = []
-    var attendrArray: [String] = []
+    var attendArray: [Int] = []
+    var absentArray: [Int] = []
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    // 7. SecondViewに渡す文字列
+    var selectedText: String?
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -39,19 +44,17 @@ class secondViewController: UIViewController,UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        //String型配列のデータを保存、読込
-        userDefaults.set([attend], forKey: "attendrArray")
-        let result1 = userDefaults.stringArray(forKey: "attendrArray")
-        
-        userDefaults.set([absent], forKey: "absentrArray")
-        let result2 = userDefaults.stringArray(forKey: "absentrArray")
-        
-         print("attendrArray:\(result1!)")
-        print("absentrArray:\(result2!)")
-        
+               
     }
     
+    // 電話番号
+    //let tel = "000-0000-0000"
+    
+    // 保存
+    //UserDefaults.standard.set(tel, forKey: Constants.telKey)
+    
+    // 読み込み
+    //UserDefaults.standard.string(forKey: Constants.telKey)
     
     /*
      // MARK: - Navigation
