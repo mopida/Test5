@@ -40,7 +40,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.textLabel!.text = fruits[indexPath.row]
         
-        
         return cell
     }
     
