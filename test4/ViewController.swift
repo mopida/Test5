@@ -48,8 +48,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print("セル番号：\(indexPath.row) セルの内容：\(fruits[indexPath.row])")
         
         
-        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier: "target" ) 
+        
+        let targetViewController : secondViewController = self.storyboard!.instantiateViewController( withIdentifier: "target" ) as! secondViewController
+        
+        targetViewController.secondIndex = indexPath.row
+        
+        
         self.present( targetViewController, animated: true, completion: nil)
+        
         
         
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class secondViewController: UIViewController,UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate{
+class secondViewController: UIViewController{
     
     @IBOutlet var AttendLabel : UILabel!
     @IBOutlet var AbsentLabel: UILabel!
@@ -21,7 +21,11 @@ class secondViewController: UIViewController,UITextFieldDelegate, UITableViewDat
     var attendArray: [Int] = []
     var absentArray: [Int] = []
     
-    @IBOutlet weak var tableView: UITableView!
+    let defaultAttendArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    let defaultAbsentArray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    
+    var secondIndex = 0
+    
     
     // 7. SecondViewに渡す文字列
     var selectedText: String?
@@ -34,17 +38,32 @@ class secondViewController: UIViewController,UITextFieldDelegate, UITableViewDat
     @IBAction func Attendance(){
         attend = attend + 1
         AttendLabel.text = String(attend)
+        attendArray[secondIndex] = attend
+        userDefaults.set(attendArray, forKey: "attend")
     }
     @IBAction func Absence(){
         absent = absent + 1
         AbsentLabel.text = String(absent)
+        absentArray[secondIndex] = absent
+        userDefaults.set(absentArray, forKey: "absent")
+    }
+    @IBAction func back(){
+        dismiss(animated: true, completion: nil)
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-               
+        
+        attendArray = userDefaults.array(forKey: "attend") as? [Int] ?? defaultAttendArray
+        absentArray = userDefaults.array(forKey: "absent") as? [Int] ?? defaultAbsentArray
+        
+        attend = attendArray[secondIndex]
+        absent = absentArray[secondIndex]
+        
+        AttendLabel.text = String(attendArray[secondIndex])
+        AbsentLabel.text = String(absentArray[secondIndex])
     }
     
     // 電話番号

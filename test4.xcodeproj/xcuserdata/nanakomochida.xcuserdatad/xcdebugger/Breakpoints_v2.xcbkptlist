@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "test4/secondViewController.swift"
-            timestampString = "518557898.956846"
+            timestampString = "521966960.445498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "secondViewController"
             landmarkType = "3">
          </BreakpointContent>
