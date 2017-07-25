@@ -8,10 +8,11 @@
 
 import UIKit
 
-class secondViewController: UIViewController{
+class secondViewController: UIViewController, UITextViewDelegate{
     
     @IBOutlet var AttendLabel : UILabel!
     @IBOutlet var AbsentLabel: UILabel!
+    @IBOutlet weak var testTextView: UITextView!
     
     var attend : Int = 0
     var absent : Int = 0
@@ -64,6 +65,27 @@ class secondViewController: UIViewController{
         
         AttendLabel.text = String(attendArray[secondIndex])
         AbsentLabel.text = String(absentArray[secondIndex])
+        
+        //ビューを作成する。
+        let testView = UIView()
+        
+        
+        //「閉じるボタン」を作成する。
+        
+        //ビューに「閉じるボタン」を追加する。
+        
+        
+        //キーボードのアクセサリにビューを設定する。
+        testTextView.inputAccessoryView = testView
+        
+        //テキストビューのデリゲート先にこのインスタンスを設定する。
+        testTextView.delegate = self
+    }
+    
+    //「閉じるボタン」で呼び出されるメソッド
+    func onClickCloseButton(sender: UIButton) {
+        //キーボードを閉じる
+        testTextView.resignFirstResponder()
     }
     
     // 電話番号

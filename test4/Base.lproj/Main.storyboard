@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ty2-dJ-3CM" id="f6b-fW-0ue">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -127,6 +127,7 @@
                     <connections>
                         <outlet property="AbsentLabel" destination="46S-w0-wkC" id="D2X-Se-EO6"/>
                         <outlet property="AttendLabel" destination="5fe-vk-DTN" id="wXu-F2-0VR"/>
+                        <outlet property="testTextView" destination="lyW-LR-EGX" id="DsX-VV-2eR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dX-Xy-5af" userLabel="First Responder" sceneMemberID="firstResponder"/>
