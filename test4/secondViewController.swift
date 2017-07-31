@@ -84,7 +84,7 @@ class secondViewController: UIViewController, UITextViewDelegate, UITextFieldDel
         //ビューを作成する。
         let testView = UIView()
         testView.frame.size.height = 60
-        testView.backgroundColor = UIColor.blue
+        testView.backgroundColor = UIColor.lightGray
         //「閉じるボタン」を作成する。
        
         
@@ -92,7 +92,7 @@ class secondViewController: UIViewController, UITextViewDelegate, UITextFieldDel
     //ビューに「閉じるボタン」を追加する。
         let closeButton = UIButton(frame: CGRect(x: UIScreen.main.bounds.size.width - 70 , y: 0, width: 70, height: 50))
         closeButton.setTitle("閉じる", for: UIControlState.normal)
-        closeButton.backgroundColor = UIColor.red
+        closeButton.backgroundColor = UIColor.orange
         closeButton.addTarget(self, action: #selector(onClickCloseButton(sender:)), for: .touchUpInside)
         
          testView.addSubview(closeButton)
